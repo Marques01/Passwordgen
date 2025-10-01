@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Senhas Seguras Online | Apoie o Projeto</title>
     <meta name="description"
-        content="Use nosso gerador de senhas online para criar senhas fortes, aleatórias e seguras. Nosso projeto é livre de anúncios. Ajude-nos a manter o serviço no ar com uma doação via PayPal.">
+          content="Use nosso gerador de senhas online para criar senhas fortes, aleatórias e seguras. Nosso projeto é livre de anúncios. Ajude-nos a manter o serviço no ar com uma doação via PayPal.">
     <meta name="keywords"
-        content="gerador de senhas, senha segura, senha forte, gerador de passwords, segurança online, doação, paypal, sem anúncios">
+          content="gerador de senhas, senha segura, senha forte, gerador de passwords, segurança online, doação, paypal, sem anúncios">
     <meta name="author" content="Gerador de Senhas">
     <meta name="robots" content="index, follow">
 
@@ -28,9 +28,9 @@
             transition: box-shadow 0.3s ease, background-color 0.3s ease;
         }
 
-        .accordion-item:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        }
+            .accordion-item:hover {
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            }
 
         /* Botão fechado */
         .accordion-button {
@@ -41,25 +41,24 @@
             box-shadow: none;
         }
 
-        /* Botão aberto */
-        .accordion-button:not(.collapsed) {
-            background-color: #4338ca !important;
-            /* azul/roxo mais forte */
-            color: #fff !important;
-        }
+            /* Botão aberto */
+            .accordion-button:not(.collapsed) {
+                background-color: #4338ca !important;
+                /* azul/roxo mais forte */
+                color: #fff !important;
+            }
 
-        /* Ícone (setinha) no tema escuro */
-        .accordion-button::after {
-            filter: invert(1);
-            /* deixa a setinha branca */
-        }
+            /* Ícone (setinha) no tema escuro */
+            .accordion-button::after {
+                filter: invert(1);
+                /* deixa a setinha branca */
+            }
 
         :root {
             --primary-color: #121212;
             --secondary-color: #1e1e1e;
             --dark-bg: #0d0d0d;
             --light-bg: #181818;
-
             /* Nova paleta */
             --accent-color: #3b82f6;
             /* Azul forte */
@@ -111,11 +110,11 @@
             background-color: var(--light-bg) !important;
         }
 
-        .accordion-button:not(.collapsed) {
-            background-color: var(--accent-color) !important;
-            color: #121212 !important;
-            font-weight: bold;
-        }
+            .accordion-button:not(.collapsed) {
+                background-color: var(--accent-color) !important;
+                color: #121212 !important;
+                font-weight: bold;
+            }
 
         .btn-primary {
             background-color: var(--accent-color);
@@ -127,11 +126,11 @@
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-        .btn-primary:hover {
-            background-color: var(--accent-hover);
-            border-color: var(--accent-hover);
-            transform: translateY(-2px);
-        }
+            .btn-primary:hover {
+                background-color: var(--accent-hover);
+                border-color: var(--accent-hover);
+                transform: translateY(-2px);
+            }
 
         .btn-outline-primary {
             border: 2px solid var(--accent-color);
@@ -140,10 +139,10 @@
             transition: all 0.3s ease;
         }
 
-        .btn-outline-primary:hover {
-            background-color: var(--accent-color);
-            color: #121212;
-        }
+            .btn-outline-primary:hover {
+                background-color: var(--accent-color);
+                color: #121212;
+            }
 
         input.form-control {
             background-color: var(--light-bg);
@@ -151,12 +150,12 @@
             border: 1px solid #333;
         }
 
-        input.form-control:focus {
-            background-color: var(--light-bg);
-            color: var(--text-color);
-            border-color: var(--accent-color);
-            box-shadow: none;
-        }
+            input.form-control:focus {
+                background-color: var(--light-bg);
+                color: var(--text-color);
+                border-color: var(--accent-color);
+                box-shadow: none;
+            }
 
         .alert-success {
             background-color: rgba(0, 200, 83, 0.1);
@@ -171,16 +170,44 @@
     </style>
 </head>
 
-
 <body>
     <header class="header-section" role="banner">
+        <!-- Nav de idiomas -->
+        <nav class="position-absolute top-0 end-0 p-3" aria-label="Seleção de idioma">
+            <div class="dropdown">
+                <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" id="languageDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                    🌐 Language
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                    <li>
+                        <button class="dropdown-item" onclick="changeLanguage('pt')">
+                            <img src="https://flagcdn.com/16x12/br.png" width="20" class="me-2"> Português
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" onclick="changeLanguage('en')">
+                            <img src="https://flagcdn.com/16x12/us.png" width="20" class="me-2"> English
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" onclick="changeLanguage('es')">
+                            <img src="https://flagcdn.com/16x12/es.png" width="20" class="me-2"> Español
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
         <div class="container">
             <h1 class="display-3 fw-bolder" id="main-title">🛡️ Gerador de Senhas Seguras Online</h1>
-            <p class="lead mt-3">Crie senhas fortes e impenetráveis para proteger sua vida digital.</p>
-            <p class="mt-4 lead fw-bold">🔐 Gerado de forma automática e segura. Não armazenamos nenhuma senha criada.
+            <p class="lead mt-3" id="main-subtitle">Crie senhas fortes e impenetráveis para proteger sua vida digital.</p>
+            <p class="mt-4 lead fw-bold" id="main-subnote">
+                🔐 Gerado de forma automática e segura. Não armazenamos nenhuma senha criada.
             </p>
         </div>
     </header>
+
     <main id="main-content" tabindex="-1">
         <section class="py-5 password-generator-section" aria-labelledby="main-title">
             <div class="container">
@@ -188,9 +215,10 @@
                     <div class="col-md-9">
                         <div class="card card-custom p-4" role="region" aria-label="Gerador de Senhas">
                             <div class="card-body text-center">
-                                <h2 class="card-title mb-4 section-title" id="gerador-title">Crie sua Senha Forte em
-                                    Segundos</h2>
-                                <p class="text-muted">
+                                <h2 class="card-title mb-4 section-title" id="gerador-title">
+                                    Crie sua Senha Forte em Segundos
+                                </h2>
+                                <p class="text-muted" id="gerador-description">
                                     Nosso gerador de senhas usa combinações matemáticas complexas para gerar senhas
                                     únicas e seguras diretamente no seu navegador. Nenhuma senha é armazenada ou enviada
                                     para nossos servidores.
@@ -199,62 +227,63 @@
                                     <div class="mb-4">
                                         <div class="input-group input-group-sm mb-3">
                                             <input type="text" class="form-control" id="passwordOutput" readonly
-                                                aria-label="Senha gerada" placeholder="Sua senha segura aparecerá aqui">
+                                                   aria-label="Senha gerada" placeholder="Sua senha segura aparecerá aqui">
                                             <button class="btn btn-outline-secondary" type="button" id="copyButton"
-                                                aria-label="Copiar senha gerada">
+                                                    aria-label="Copiar senha gerada">
                                                 <i class="fas fa-copy" aria-hidden="true"></i>
                                             </button>
                                         </div>
 
                                         <div class="text-center">
                                             <button class="btn btn-primary" type="button" id="generateButton"
-                                                aria-label="Gerar nova senha">
+                                                    aria-label="Gerar nova senha">
                                                 Gerar Senha
                                             </button>
                                         </div>
                                     </div>
 
                                     <div class="alert alert-success mt-3 d-none" id="copyAlert" role="alert"
-                                        aria-live="polite">
+                                         aria-live="polite">
                                         Senha copiada! ✅
                                     </div>
                                     <hr class="my-4">
                                     <div class="row align-items-center">
                                         <div class="col-md-8 mb-3 mb-md-0">
-                                            <label for="passwordLength" class="form-label text-muted">Tamanho da Senha:
+                                            <label for="passwordLength" class="form-label text-muted">
+                                                Tamanho da Senha:
                                                 <span class="fw-bold fs-5 text-success" id="lengthValue">16</span>
                                             </label>
                                             <input type="range" class="form-range" id="passwordLength" min="8" max="32"
-                                                value="16" aria-valuenow="16" aria-valuemin="8" aria-valuemax="32"
-                                                aria-label="Tamanho da senha">
+                                                   value="16" aria-valuenow="16" aria-valuemin="8" aria-valuemax="32"
+                                                   aria-label="Tamanho da senha">
                                         </div>
                                         <div class="col-md-4">
                                             <fieldset>
                                                 <legend class="visually-hidden">Opções de composição da senha</legend>
                                                 <div class="form-check text-start">
                                                     <input class="form-check-input" type="checkbox"
-                                                        id="includeUppercase" checked aria-checked="true">
+                                                           id="includeUppercase" checked aria-checked="true">
                                                     <label class="form-check-label" for="includeUppercase">
                                                         Letras Maiúsculas (A-Z)
                                                     </label>
                                                 </div>
                                                 <div class="form-check text-start">
                                                     <input class="form-check-input" type="checkbox"
-                                                        id="includeLowercase" checked aria-checked="true">
+                                                           id="includeLowercase" checked aria-checked="true">
                                                     <label class="form-check-label" for="includeLowercase">
                                                         Letras Minúsculas (a-z)
                                                     </label>
                                                 </div>
                                                 <div class="form-check text-start">
                                                     <input class="form-check-input" type="checkbox" id="includeNumbers"
-                                                        checked aria-checked="true">
+                                                           checked aria-checked="true">
                                                     <label class="form-check-label" for="includeNumbers">
                                                         Números (0-9)
                                                     </label>
                                                 </div>
                                                 <div class="form-check text-start">
                                                     <input class="form-check-input" type="checkbox" id="includeSymbols"
-                                                        checked aria-checked="true">
+                                                           checked aria-checked="true">
                                                     <label class="form-check-label" for="includeSymbols">
                                                         Símbolos (!@#$...)
                                                     </label>
@@ -269,49 +298,57 @@
                 </div>
             </div>
         </section>
+
         <section class="py-5 bg-dark" aria-labelledby="doacao-title">
             <div class="container text-center">
                 <h2 class="section-title" id="doacao-title">⭐ Ajude a Manter o Projeto no Ar</h2>
-                <p class="lead text-muted">Acreditamos que a segurança deve ser acessível a todos, sem anúncios ou
+                <p class="lead text-muted" id="doacao-description">
+                    Acreditamos que a segurança deve ser acessível a todos, sem anúncios ou
                     interrupções. Se você achou nosso serviço útil, considere fazer uma doação para nos ajudar a cobrir
-                    os custos de manutenção e continuar oferecendo esta ferramenta de forma gratuita.</p>
+                    os custos de manutenção e continuar oferecendo esta ferramenta de forma gratuita.
+                </p>
                 <div class="row justify-content-center mt-5 donation-options">
                     <div class="col-12 col-md-8 col-lg-6">
-                        <p class="fw-bold mb-3">Escolha um valor ou doe o quanto quiser:</p>
+                        <p class="fw-bold mb-3" id="donation-prompt">Escolha um valor ou doe o quanto quiser:</p>
                         <nav aria-label="Opções de doação">
                             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center mb-4">
-                                <a href="#" class="btn btn-outline-primary btn-lg" aria-label="Doar US$ 1">US$ 1</a>
-                                <a href="#" class="btn btn-outline-primary btn-lg" aria-label="Doar US$ 3">US$ 3</a>
-                                <a href="#" class="btn btn-outline-primary btn-lg" aria-label="Doar US$ 5">US$ 5</a>
+                                <a href="#" class="btn btn-outline-primary btn-lg" id="donate1" aria-label="Doar US$ 1">US$ 1</a>
+                                <a href="#" class="btn btn-outline-primary btn-lg" id="donate3" aria-label="Doar US$ 3">US$ 3</a>
+                                <a href="#" class="btn btn-outline-primary btn-lg" id="donate5" aria-label="Doar US$ 5">US$ 5</a>
                             </div>
                         </nav>
-                        <a href="#" class="btn btn-primary btn-lg w-100" aria-label="Doar outro valor">Doar Outro
-                            Valor</a>
-                        <p class="mt-4 text-muted fst-italic">Todas as doações são processadas com segurança via PayPal.
+                        <a href="#" class="btn btn-primary btn-lg w-100" id="donateOther" aria-label="Doar outro valor">
+                            Doar Outro Valor
+                        </a>
+                        <p class="mt-4 text-muted fst-italic" id="donation-note">
+                            Todas as doações são processadas com segurança via PayPal.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
+
         <section class="py-5" aria-labelledby="seguranca-title">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="section-title" id="seguranca-title">🔒 A Importância de uma Senha Forte</h2>
-                    <p class="lead text-muted">Aprenda a se proteger em um mundo cada vez mais digital. O gerador de
-                        senhas é sua primeira linha de defesa.</p>
+                    <p class="lead text-muted" id="security-intro">
+                        Aprenda a se proteger em um mundo cada vez mais digital. O gerador de
+                        senhas é sua primeira linha de defesa.
+                    </p>
                 </div>
                 <div class="accordion" id="securityAccordion" role="tablist" aria-label="Dicas de segurança">
                     <div class="accordion-item mb-3">
                         <h3 class="accordion-header" id="headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
-                                id="btn-seguranca-1">
-                                <span class="me-3" aria-hidden="true">🎯</span> <span>Senha forte vs. senha fraca</span>
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
+                                    id="btn-seguranca-1">
+                                <span class="me-3" aria-hidden="true">🎯</span> <span id="security1-title">Senha forte vs. senha fraca</span>
                             </button>
                         </h3>
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                            data-bs-parent="#securityAccordion" role="tabpanel">
-                            <div class="accordion-body">
+                             data-bs-parent="#securityAccordion" role="tabpanel">
+                            <div class="accordion-body" id="security1-content">
                                 Uma senha forte é longa, imprevisível e única para cada conta. Use sempre um gerador de
                                 senhas para garantir que a sua senha seja realmente aleatória e segura. Senhas fracas
                                 (como nomes ou datas de nascimento) são facilmente descobertas por hackers.
@@ -321,15 +358,14 @@
                     <div class="accordion-item mb-3">
                         <h3 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
-                                id="btn-seguranca-2">
-                                <span class="me-3" aria-hidden="true">🔗</span> <span>Por que usar senhas únicas para
-                                    cada site?</span>
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                                    id="btn-seguranca-2">
+                                <span class="me-3" aria-hidden="true">🔗</span> <span id="security2-title">Por que usar senhas únicas para cada site?</span>
                             </button>
                         </h3>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                            data-bs-parent="#securityAccordion" role="tabpanel">
-                            <div class="accordion-body">
+                             data-bs-parent="#securityAccordion" role="tabpanel">
+                            <div class="accordion-body" id="security2-content">
                                 Reutilizar a mesma senha em vários sites é extremamente perigoso. Se um desses sites
                                 sofrer uma violação de dados, os hackers poderão usar a mesma senha para acessar todas
                                 as suas outras contas. Gerar senhas únicas impede esse tipo de ataque.
@@ -339,21 +375,19 @@
                     <div class="accordion-item">
                         <h3 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
-                                id="btn-seguranca-3">
-                                <span class="me-3" aria-hidden="true">💡</span> <span>Como aumentar sua segurança
-                                    online</span>
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                                    id="btn-seguranca-3">
+                                <span class="me-3" aria-hidden="true">💡</span> <span id="security3-title">Como aumentar sua segurança online</span>
                             </button>
                         </h3>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                            data-bs-parent="#securityAccordion" role="tabpanel">
-                            <div class="accordion-body">
+                             data-bs-parent="#securityAccordion" role="tabpanel">
+                            <div class="accordion-body" id="security3-content">
                                 <ul>
-                                    <li>Use sempre um Gerenciador de Senhas para guardar suas senhas fortes com
-                                        segurança.</li>
-                                    <li>Ative a Autenticação de Dois Fatores (2FA).</li>
-                                    <li>Desconfie de e-mails ou mensagens de phishing que pedem suas informações.</li>
-                                    <li>Mantenha software e sistemas operacionais atualizados.</li>
+                                    <li id="tip1">Use sempre um Gerenciador de Senhas para guardar suas senhas fortes com segurança.</li>
+                                    <li id="tip2">Ative a Autenticação de Dois Fatores (2FA).</li>
+                                    <li id="tip3">Desconfie de e-mails ou mensagens de phishing que pedem suas informações.</li>
+                                    <li id="tip4">Mantenha software e sistemas operacionais atualizados.</li>
                                 </ul>
                             </div>
                         </div>
@@ -362,78 +396,155 @@
             </div>
         </section>
     </main>
+
     <footer class="text-center py-4" role="contentinfo">
         <div class="container">
-            <p class="mb-0">&copy; 2025 Gerador de Senhas. Todos os direitos reservados.</p>
+            <p class="mb-0" id="footer-text">&copy; 2025 Gerador de Senhas. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const passwordOutput = document.getElementById('passwordOutput');
-            const generateButton = document.getElementById('generateButton');
-            const copyButton = document.getElementById('copyButton');
-            const copyAlert = document.getElementById('copyAlert');
-            const passwordLengthInput = document.getElementById('passwordLength');
-            const lengthValueSpan = document.getElementById('lengthValue');
-            const includeUppercase = document.getElementById('includeUppercase');
-            const includeLowercase = document.getElementById('includeLowercase');
-            const includeNumbers = document.getElementById('includeNumbers');
-            const includeSymbols = document.getElementById('includeSymbols');
+        const translations = {
+            pt: {
+                mainTitle: "🛡️ Gerador de Senhas Seguras Online",
+                mainSubtitle: "Crie senhas fortes e impenetráveis para proteger sua vida digital.",
+                mainSubnote: "🔐 Gerado de forma automática e segura. Não armazenamos nenhuma senha criada.",
+                geradorTitle: "Crie sua Senha Forte em Segundos",
+                geradorDescription: "Nosso gerador de senhas usa combinações matemáticas complexas para gerar senhas únicas e seguras diretamente no seu navegador. Nenhuma senha é armazenada ou enviada para nossos servidores.",
+                passwordPlaceholder: "Sua senha segura aparecerá aqui",
+                generateButton: "Gerar Senha",
+                copyAlert: "Senha copiada! ✅",
+                passwordLengthLabel: "Tamanho da Senha:",
+                includeUppercase: "Letras Maiúsculas (A-Z)",
+                includeLowercase: "Letras Minúsculas (a-z)",
+                includeNumbers: "Números (0-9)",
+                includeSymbols: "Símbolos (!@#$...)",
+                donationTitle: "⭐ Ajude a Manter o Projeto no Ar",
+                donationDescription: "Acreditamos que a segurança deve ser acessível a todos, sem anúncios ou interrupções. Se você achou nosso serviço útil, considere fazer uma doação para nos ajudar a cobrir os custos de manutenção e continuar oferecendo esta ferramenta de forma gratuita.",
+                donationPrompt: "Escolha um valor ou doe o quanto quiser:",
+                donateOther: "Doar Outro Valor",
+                donationNote: "Todas as doações são processadas com segurança via PayPal.",
+                securityTitle: "🔒 A Importância de uma Senha Forte",
+                securityIntro: "Aprenda a se proteger em um mundo cada vez mais digital. O gerador de senhas é sua primeira linha de defesa.",
+                security1Title: "Senha forte vs. senha fraca",
+                security1Content: "Uma senha forte é longa, imprevisível e única para cada conta. Use sempre um gerador de senhas para garantir que a sua senha seja realmente aleatória e segura. Senhas fracas (como nomes ou datas de nascimento) são facilmente descobertas por hackers.",
+                security2Title: "Por que usar senhas únicas para cada site?",
+                security2Content: "Reutilizar a mesma senha em vários sites é extremamente perigoso. Se um desses sites sofrer uma violação de dados, os hackers poderão usar a mesma senha para acessar todas as suas outras contas. Gerar senhas únicas impede esse tipo de ataque.",
+                security3Title: "Como aumentar sua segurança online",
+                tip1: "Use sempre um Gerenciador de Senhas para guardar suas senhas fortes com segurança.",
+                tip2: "Ative a Autenticação de Dois Fatores (2FA).",
+                tip3: "Desconfie de e-mails ou mensagens de phishing que pedem suas informações.",
+                tip4: "Mantenha software e sistemas operacionais atualizados.",
+                footerText: "© 2025 Gerador de Senhas. Todos os direitos reservados."
+            },
+            en: {
+                mainTitle: "🛡️ Secure Password Generator Online",
+                mainSubtitle: "Create strong and unbreakable passwords to protect your digital life.",
+                mainSubnote: "🔐 Automatically generated securely. We do not store any created passwords.",
+                geradorTitle: "Create Your Strong Password in Seconds",
+                geradorDescription: "Our password generator uses complex mathematical combinations to generate unique and secure passwords directly in your browser. No password is stored or sent to our servers.",
+                passwordPlaceholder: "Your secure password will appear here",
+                generateButton: "Generate Password",
+                copyAlert: "Password copied! ✅",
+                passwordLengthLabel: "Password Length:",
+                includeUppercase: "Uppercase Letters (A-Z)",
+                includeLowercase: "Lowercase Letters (a-z)",
+                includeNumbers: "Numbers (0-9)",
+                includeSymbols: "Symbols (!@#$...)",
+                donationTitle: "⭐ Help Keep the Project Running",
+                donationDescription: "We believe security should be accessible to everyone, without ads or interruptions. If you found our service useful, consider making a donation to help cover maintenance costs and continue offering this tool for free.",
+                donationPrompt: "Choose an amount or donate what you want:",
+                donateOther: "Donate Other Amount",
+                donationNote: "All donations are securely processed via PayPal.",
+                securityTitle: "🔒 The Importance of a Strong Password",
+                securityIntro: "Learn to protect yourself in an increasingly digital world. The password generator is your first line of defense.",
+                security1Title: "Strong vs. Weak Password",
+                security1Content: "A strong password is long, unpredictable, and unique for each account. Always use a password generator to ensure your password is truly random and secure. Weak passwords (like names or birthdates) are easily discovered by hackers.",
+                security2Title: "Why use unique passwords for each site?",
+                security2Content: "Reusing the same password across multiple sites is extremely dangerous. If one of these sites suffers a data breach, hackers can use the same password to access all your other accounts. Generating unique passwords prevents this type of attack.",
+                security3Title: "How to Improve Your Online Security",
+                tip1: "Always use a Password Manager to safely store your strong passwords.",
+                tip2: "Enable Two-Factor Authentication (2FA).",
+                tip3: "Be cautious of phishing emails or messages asking for your information.",
+                tip4: "Keep software and operating systems up to date.",
+                footerText: "© 2025 Password Generator. All rights reserved."
+            },
+            es: {
+                mainTitle: "🛡️ Generador de Contraseñas Seguras en Línea",
+                mainSubtitle: "Crea contraseñas fuertes e impenetrables para proteger tu vida digital.",
+                mainSubnote: "🔐 Generado automáticamente de forma segura. No almacenamos ninguna contraseña creada.",
+                geradorTitle: "Crea tu Contraseña Fuerte en Segundos",
+                geradorDescription: "Nuestro generador de contraseñas utiliza combinaciones matemáticas complejas para generar contraseñas únicas y seguras directamente en tu navegador. Ninguna contraseña se almacena o envía a nuestros servidores.",
+                passwordPlaceholder: "Tu contraseña segura aparecerá aquí",
+                generateButton: "Generar Contraseña",
+                copyAlert: "¡Contraseña copiada! ✅",
+                passwordLengthLabel: "Longitud de la Contraseña:",
+                includeUppercase: "Letras Mayúsculas (A-Z)",
+                includeLowercase: "Letras Minúsculas (a-z)",
+                includeNumbers: "Números (0-9)",
+                includeSymbols: "Símbolos (!@#$...)",
+                donationTitle: "⭐ Ayuda a Mantener el Proyecto en Línea",
+                donationDescription: "Creemos que la seguridad debe ser accesible para todos, sin anuncios ni interrupciones. Si encontraste nuestro servicio útil, considera hacer una donación para ayudarnos a cubrir los costos de mantenimiento y seguir ofreciendo esta herramienta de forma gratuita.",
+                donationPrompt: "Elige un monto o dona lo que quieras:",
+                donateOther: "Donar Otro Monto",
+                donationNote: "Todas las donaciones se procesan de manera segura a través de PayPal.",
+                securityTitle: "🔒 La Importancia de una Contraseña Fuerte",
+                securityIntro: "Aprende a protegerte en un mundo cada vez más digital. El generador de contraseñas es tu primera línea de defensa.",
+                security1Title: "Contraseña Fuerte vs. Débil",
+                security1Content: "Una contraseña fuerte es larga, impredecible y única para cada cuenta. Usa siempre un generador de contraseñas para garantizar que tu contraseña sea realmente aleatoria y segura. Las contraseñas débiles (como nombres o fechas de nacimiento) son fácilmente descubiertas por hackers.",
+                security2Title: "¿Por qué usar contraseñas únicas para cada sitio?",
+                security2Content: "Reutilizar la misma contraseña en varios sitios es extremadamente peligroso. Si uno de estos sitios sufre una violación de datos, los hackers podrán usar la misma contraseña para acceder a todas tus demás cuentas. Generar contraseñas únicas previene este tipo de ataque.",
+                security3Title: "Cómo aumentar tu seguridad en línea",
+                tip1: "Usa siempre un Administrador de Contraseñas para guardar tus contraseñas fuertes de manera segura.",
+                tip2: "Activa la Autenticación de Dos Factores (2FA).",
+                tip3: "Desconfía de correos electrónicos o mensajes de phishing que soliciten tu información.",
+                tip4: "Mantén el software y los sistemas operativos actualizados.",
+                footerText: "© 2025 Generador de Contraseñas. Todos los derechos reservados."
+            }
+        };
 
-            // Acessibilidade: foco automático no campo de senha gerada ao gerar
-            const generatePassword = () => {
-                const length = passwordLengthInput.value;
-                const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-                const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
-                const numberChars = '0123456789';
-                const symbolChars = '!@#$%^&*()-_+=[]{}|;:,.<>?';
+        function changeLanguage(lang) {
+            const t = translations[lang];
 
-                let characters = '';
-                if (includeUppercase.checked) characters += uppercaseChars;
-                if (includeLowercase.checked) characters += lowercaseChars;
-                if (includeNumbers.checked) characters += numberChars;
-                if (includeSymbols.checked) characters += symbolChars;
+            document.getElementById('main-title').textContent = t.mainTitle;
+            document.getElementById('main-subtitle').textContent = t.mainSubtitle;
+            document.getElementById('main-subnote').textContent = t.mainSubnote;
 
-                if (characters === '') {
-                    passwordOutput.value = 'Selecione pelo menos uma opção.';
-                    passwordOutput.setAttribute('aria-invalid', 'true');
-                    return;
-                }
+            document.getElementById('gerador-title').textContent = t.geradorTitle;
+            document.getElementById('gerador-description').textContent = t.geradorDescription;
+            document.getElementById('passwordOutput').placeholder = t.passwordPlaceholder;
+            document.getElementById('generateButton').textContent = t.generateButton;
+            document.getElementById('copyAlert').textContent = t.copyAlert;
+            document.querySelector('label[for="passwordLength"]').childNodes[0].textContent = t.passwordLengthLabel;
 
-                let password = '';
-                for (let i = 0; i < length; i++) {
-                    const randomIndex = Math.floor(Math.random() * characters.length);
-                    password += characters[randomIndex];
-                }
-                passwordOutput.value = password;
-                passwordOutput.setAttribute('aria-invalid', 'false');
-                passwordOutput.focus();
-            };
+            document.querySelector('label[for="includeUppercase"]').textContent = t.includeUppercase;
+            document.querySelector('label[for="includeLowercase"]').textContent = t.includeLowercase;
+            document.querySelector('label[for="includeNumbers"]').textContent = t.includeNumbers;
+            document.querySelector('label[for="includeSymbols"]').textContent = t.includeSymbols;
 
-            // Copiar senha: acessibilidade para leitores de tela
-            const copyPassword = () => {
-                passwordOutput.select();
-                document.execCommand('copy');
-                copyAlert.classList.remove('d-none');
-                copyAlert.setAttribute('aria-live', 'assertive');
-                setTimeout(() => {
-                    copyAlert.classList.add('d-none');
-                    copyAlert.setAttribute('aria-live', 'polite');
-                }, 2000);
-            };
+            document.getElementById('doacao-title').textContent = t.donationTitle;
+            document.getElementById('doacao-description').textContent = t.donationDescription;
+            document.getElementById('donation-prompt').textContent = t.donationPrompt;
+            document.getElementById('donateOther').textContent = t.donateOther;
+            document.getElementById('donation-note').textContent = t.donationNote;
 
-            generateButton.addEventListener('click', generatePassword);
-            copyButton.addEventListener('click', copyPassword);
-            passwordLengthInput.addEventListener('input', () => {
-                lengthValueSpan.textContent = passwordLengthInput.value;
-                passwordLengthInput.setAttribute('aria-valuenow', passwordLengthInput.value);
-                generatePassword();
-            });
+            document.getElementById('seguranca-title').textContent = t.securityTitle;
+            document.getElementById('security-intro').textContent = t.securityIntro;
+            document.getElementById('security1-title').textContent = t.security1Title;
+            document.getElementById('security1-content').textContent = t.security1Content;
+            document.getElementById('security2-title').textContent = t.security2Title;
+            document.getElementById('security2-content').textContent = t.security2Content;
+            document.getElementById('security3-title').textContent = t.security3Title;
+            document.getElementById('tip1').textContent = t.tip1;
+            document.getElementById('tip2').textContent = t.tip2;
+            document.getElementById('tip3').textContent = t.tip3;
+            document.getElementById('tip4').textContent = t.tip4;
 
-            generatePassword();
-        });
+            document.getElementById('footer-text').textContent = t.footerText;
+        }
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
