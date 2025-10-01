@@ -177,7 +177,8 @@
         <div class="container">
             <h1 class="display-3 fw-bolder" id="main-title">🛡️ Gerador de Senhas Seguras Online</h1>
             <p class="lead mt-3">Crie senhas fortes e impenetráveis para proteger sua vida digital.</p>
-            <p class="mt-4 lead fw-bold">🔐 Gerado de forma automática e segura. Não armazenamos nenhuma senha criada.</p>
+            <p class="mt-4 lead fw-bold">🔐 Gerado de forma automática e segura. Não armazenamos nenhuma senha criada.
+            </p>
         </div>
     </header>
     <main id="main-content" tabindex="-1">
@@ -187,19 +188,34 @@
                     <div class="col-md-9">
                         <div class="card card-custom p-4" role="region" aria-label="Gerador de Senhas">
                             <div class="card-body text-center">
-                                <h2 class="card-title mb-4 section-title" id="gerador-title">Crie sua Senha Forte em Segundos</h2>
+                                <h2 class="card-title mb-4 section-title" id="gerador-title">Crie sua Senha Forte em
+                                    Segundos</h2>
                                 <p class="text-muted">
-                                    Nosso gerador de senhas usa combinações matemáticas complexas para gerar senhas únicas e seguras diretamente no seu navegador. Nenhuma senha é armazenada ou enviada para nossos servidores.
+                                    Nosso gerador de senhas usa combinações matemáticas complexas para gerar senhas
+                                    únicas e seguras diretamente no seu navegador. Nenhuma senha é armazenada ou enviada
+                                    para nossos servidores.
                                 </p>
                                 <form aria-labelledby="gerador-title" autocomplete="off">
-                                    <div class="input-group input-group-lg mb-4">
-                                        <input type="text" class="form-control" id="passwordOutput" readonly aria-label="Senha gerada" placeholder="Sua senha segura aparecerá aqui">
-                                        <button class="btn btn-primary" type="button" id="generateButton" aria-label="Gerar nova senha">Gerar Senha</button>
-                                        <button class="btn btn-outline-secondary" type="button" id="copyButton" aria-label="Copiar senha gerada">
-                                            <i class="fas fa-copy" aria-hidden="true"></i>
-                                        </button>
+                                    <div class="mb-4">
+                                        <div class="input-group input-group-sm mb-3">
+                                            <input type="text" class="form-control" id="passwordOutput" readonly
+                                                aria-label="Senha gerada" placeholder="Sua senha segura aparecerá aqui">
+                                            <button class="btn btn-outline-secondary" type="button" id="copyButton"
+                                                aria-label="Copiar senha gerada">
+                                                <i class="fas fa-copy" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="text-center">
+                                            <button class="btn btn-primary" type="button" id="generateButton"
+                                                aria-label="Gerar nova senha">
+                                                Gerar Senha
+                                            </button>
+                                        </div>
                                     </div>
-                                    <div class="alert alert-success mt-3 d-none" id="copyAlert" role="alert" aria-live="polite">
+
+                                    <div class="alert alert-success mt-3 d-none" id="copyAlert" role="alert"
+                                        aria-live="polite">
                                         Senha copiada! ✅
                                     </div>
                                     <hr class="my-4">
@@ -208,31 +224,37 @@
                                             <label for="passwordLength" class="form-label text-muted">Tamanho da Senha:
                                                 <span class="fw-bold fs-5 text-success" id="lengthValue">16</span>
                                             </label>
-                                            <input type="range" class="form-range" id="passwordLength" min="8" max="32" value="16" aria-valuenow="16" aria-valuemin="8" aria-valuemax="32" aria-label="Tamanho da senha">
+                                            <input type="range" class="form-range" id="passwordLength" min="8" max="32"
+                                                value="16" aria-valuenow="16" aria-valuemin="8" aria-valuemax="32"
+                                                aria-label="Tamanho da senha">
                                         </div>
                                         <div class="col-md-4">
                                             <fieldset>
                                                 <legend class="visually-hidden">Opções de composição da senha</legend>
                                                 <div class="form-check text-start">
-                                                    <input class="form-check-input" type="checkbox" id="includeUppercase" checked aria-checked="true">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="includeUppercase" checked aria-checked="true">
                                                     <label class="form-check-label" for="includeUppercase">
                                                         Letras Maiúsculas (A-Z)
                                                     </label>
                                                 </div>
                                                 <div class="form-check text-start">
-                                                    <input class="form-check-input" type="checkbox" id="includeLowercase" checked aria-checked="true">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="includeLowercase" checked aria-checked="true">
                                                     <label class="form-check-label" for="includeLowercase">
                                                         Letras Minúsculas (a-z)
                                                     </label>
                                                 </div>
                                                 <div class="form-check text-start">
-                                                    <input class="form-check-input" type="checkbox" id="includeNumbers" checked aria-checked="true">
+                                                    <input class="form-check-input" type="checkbox" id="includeNumbers"
+                                                        checked aria-checked="true">
                                                     <label class="form-check-label" for="includeNumbers">
                                                         Números (0-9)
                                                     </label>
                                                 </div>
                                                 <div class="form-check text-start">
-                                                    <input class="form-check-input" type="checkbox" id="includeSymbols" checked aria-checked="true">
+                                                    <input class="form-check-input" type="checkbox" id="includeSymbols"
+                                                        checked aria-checked="true">
                                                     <label class="form-check-label" for="includeSymbols">
                                                         Símbolos (!@#$...)
                                                     </label>
@@ -250,7 +272,9 @@
         <section class="py-5 bg-dark" aria-labelledby="doacao-title">
             <div class="container text-center">
                 <h2 class="section-title" id="doacao-title">⭐ Ajude a Manter o Projeto no Ar</h2>
-                <p class="lead text-muted">Acreditamos que a segurança deve ser acessível a todos, sem anúncios ou interrupções. Se você achou nosso serviço útil, considere fazer uma doação para nos ajudar a cobrir os custos de manutenção e continuar oferecendo esta ferramenta de forma gratuita.</p>
+                <p class="lead text-muted">Acreditamos que a segurança deve ser acessível a todos, sem anúncios ou
+                    interrupções. Se você achou nosso serviço útil, considere fazer uma doação para nos ajudar a cobrir
+                    os custos de manutenção e continuar oferecendo esta ferramenta de forma gratuita.</p>
                 <div class="row justify-content-center mt-5 donation-options">
                     <div class="col-12 col-md-8 col-lg-6">
                         <p class="fw-bold mb-3">Escolha um valor ou doe o quanto quiser:</p>
@@ -261,8 +285,10 @@
                                 <a href="#" class="btn btn-outline-primary btn-lg" aria-label="Doar US$ 5">US$ 5</a>
                             </div>
                         </nav>
-                        <a href="#" class="btn btn-primary btn-lg w-100" aria-label="Doar outro valor">Doar Outro Valor</a>
-                        <p class="mt-4 text-muted fst-italic">Todas as doações são processadas com segurança via PayPal.</p>
+                        <a href="#" class="btn btn-primary btn-lg w-100" aria-label="Doar outro valor">Doar Outro
+                            Valor</a>
+                        <p class="mt-4 text-muted fst-italic">Todas as doações são processadas com segurança via PayPal.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -271,43 +297,60 @@
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="section-title" id="seguranca-title">🔒 A Importância de uma Senha Forte</h2>
-                    <p class="lead text-muted">Aprenda a se proteger em um mundo cada vez mais digital. O gerador de senhas é sua primeira linha de defesa.</p>
+                    <p class="lead text-muted">Aprenda a se proteger em um mundo cada vez mais digital. O gerador de
+                        senhas é sua primeira linha de defesa.</p>
                 </div>
                 <div class="accordion" id="securityAccordion" role="tablist" aria-label="Dicas de segurança">
                     <div class="accordion-item mb-3">
                         <h3 class="accordion-header" id="headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" id="btn-seguranca-1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
+                                id="btn-seguranca-1">
                                 <span class="me-3" aria-hidden="true">🎯</span> <span>Senha forte vs. senha fraca</span>
                             </button>
                         </h3>
-                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#securityAccordion" role="tabpanel">
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#securityAccordion" role="tabpanel">
                             <div class="accordion-body">
-                                Uma senha forte é longa, imprevisível e única para cada conta. Use sempre um gerador de senhas para garantir que a sua senha seja realmente aleatória e segura. Senhas fracas (como nomes ou datas de nascimento) são facilmente descobertas por hackers.
+                                Uma senha forte é longa, imprevisível e única para cada conta. Use sempre um gerador de
+                                senhas para garantir que a sua senha seja realmente aleatória e segura. Senhas fracas
+                                (como nomes ou datas de nascimento) são facilmente descobertas por hackers.
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item mb-3">
                         <h3 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="btn-seguranca-2">
-                                <span class="me-3" aria-hidden="true">🔗</span> <span>Por que usar senhas únicas para cada site?</span>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                                id="btn-seguranca-2">
+                                <span class="me-3" aria-hidden="true">🔗</span> <span>Por que usar senhas únicas para
+                                    cada site?</span>
                             </button>
                         </h3>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#securityAccordion" role="tabpanel">
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#securityAccordion" role="tabpanel">
                             <div class="accordion-body">
-                                Reutilizar a mesma senha em vários sites é extremamente perigoso. Se um desses sites sofrer uma violação de dados, os hackers poderão usar a mesma senha para acessar todas as suas outras contas. Gerar senhas únicas impede esse tipo de ataque.
+                                Reutilizar a mesma senha em vários sites é extremamente perigoso. Se um desses sites
+                                sofrer uma violação de dados, os hackers poderão usar a mesma senha para acessar todas
+                                as suas outras contas. Gerar senhas únicas impede esse tipo de ataque.
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h3 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="btn-seguranca-3">
-                                <span class="me-3" aria-hidden="true">💡</span> <span>Como aumentar sua segurança online</span>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                                id="btn-seguranca-3">
+                                <span class="me-3" aria-hidden="true">💡</span> <span>Como aumentar sua segurança
+                                    online</span>
                             </button>
                         </h3>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#securityAccordion" role="tabpanel">
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#securityAccordion" role="tabpanel">
                             <div class="accordion-body">
                                 <ul>
-                                    <li>Use sempre um Gerenciador de Senhas para guardar suas senhas fortes com segurança.</li>
+                                    <li>Use sempre um Gerenciador de Senhas para guardar suas senhas fortes com
+                                        segurança.</li>
                                     <li>Ative a Autenticação de Dois Fatores (2FA).</li>
                                     <li>Desconfie de e-mails ou mensagens de phishing que pedem suas informações.</li>
                                     <li>Mantenha software e sistemas operacionais atualizados.</li>
