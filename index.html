@@ -304,7 +304,7 @@
                 <div class="row">
                     <div class="col-lg-10 mx-auto">
                         <h2 class="section-title text-center mb-4" id="analise-seguranca-title">A Complexidade
-                            Matemática das Senhas Fortes (O Conteúdo que Faltava)</h2>
+                            Matemática das Senhas Fortes</h2>
                         <p class="lead text-muted text-center">
                             Entender a segurança de uma senha vai além de apenas adicionar números e símbolos. Envolve a
                             ciência da criptografia e a matemática por trás da aleatoriedade, fatores cruciais para
@@ -341,10 +341,32 @@
                 </div>
             </div>
         </section>
+        
+        <section class="py-5" aria-labelledby="anatomia-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <h2 class="section-title text-center mb-4" id="anatomia-title">A Anatomia de uma Senha Perfeita</h2>
+                        <p class="lead text-muted text-center" id="anatomia-subtitle">
+                            Além do tamanho, o *mix* de caracteres é a chave para a máxima segurança. Entenda como cada categoria (maiúsculas, minúsculas, números e símbolos) contribui para o aumento da complexidade.
+                        </p>
 
+                        <h3 class="mt-5 text-accent" id="keyspace-title">O Impacto Exponencial do Conjunto de Caracteres</h3>
+                        <p id="keyspace-content">
+                            A força de uma senha é uma função direta do seu **tamanho (L)** e do **tamanho do alfabeto de caracteres (R)**. A fórmula para o número total de combinações (o *keyspace* ou espaço de busca) é $R^L$. Se um atacante souber que você usa apenas minúsculas (R=26), uma senha de 10 caracteres tem $26^{10}$ combinações possíveis. Ao adicionar maiúsculas, números e 32 símbolos (R $\approx$ 94), o número de combinações para os mesmos 10 caracteres salta para $94^{10}$, um aumento maciço na dificuldade de quebra.
+                            Para a aprovação em padrões de segurança, o uso de caracteres distintos deve ser aleatório e balanceado. É por isso que nosso gerador permite que você marque todas as opções, maximizando o $R$ (o conjunto de caracteres) e, consequentemente, a entropia.
+                        </p>
 
+                        <h3 class="mt-4 text-accent" id="attack-title">Tipos de Ataques a Senhas</h3>
+                        <p id="attack-content">
+                            Ataques de força bruta são os mais conhecidos, mas os cibercriminosos usam táticas mais refinadas. O **Ataque de Dicionário** tenta senhas baseadas em listas de palavras, nomes comuns e frases famosas. Já os **Rainbow Tables** (Tabelas Arco-Íris) são listas pré-calculadas de hashes de senhas comuns, permitindo que o invasor encontre a senha original a partir do hash roubado quase instantaneamente. O único antídoto contra estas técnicas é a criação de senhas que são **longas, aleatórias e não-dicionárias**.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="py-5" aria-labelledby="doacao-title">
-            <div class="container text-center">
+            <div class="container text-center d-none">
                 <h2 class="section-title" id="doacao-title">⭐ Ajude a Manter o Projeto no Ar</h2>
                 <p class="lead text-muted" id="doacao-description">
                     Acreditamos que a segurança deve ser acessível a todos, sem anúncios ou
@@ -431,7 +453,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item mb-3">
                         <h3 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
@@ -460,6 +482,71 @@
                             </div>
                         </div>
                     </div>
+                    <div class="accordion-item mb-3">
+                        <h3 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
+                                id="btn-seguranca-4">
+                                <span class="me-3" aria-hidden="true">⚙️</span> <span id="security4-title">Como os sites armazenam (e protegem) sua senha?</span>
+                            </button>
+                        </h3>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#securityAccordion" role="tabpanel">
+                            <div class="accordion-body" id="security4-content">
+                                Quando você cria uma conta em um site, sua senha **não é armazenada em texto puro**. Em vez disso, o site armazena um **hash** da sua senha. Um hash é o resultado de uma função criptográfica unidirecional (como **SHA-256** ou **Bcrypt**) que transforma a sua senha em uma cadeia de caracteres de tamanho fixo. O processo de *hashing* é irreversível. Se uma base de dados for roubada, os invasores só terão acesso aos hashes, não às senhas originais. Senhas fortes e longas, como as geradas por esta ferramenta, dificultam a vida do atacante, pois tornam a busca pelo texto original (*reverse engineering* ou *rainbow tables*) extremamente lenta e ineficaz.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3">
+                        <h3 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
+                                id="btn-seguranca-5">
+                                <span class="me-3" aria-hidden="true">🎣</span> <span id="security5-title">O Risco de Phishing e Engenharia Social</span>
+                            </button>
+                        </h3>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                            data-bs-parent="#securityAccordion" role="tabpanel">
+                            <div class="accordion-body" id="security5-content">
+                                Mesmo a senha mais forte é inútil se for entregue de bom grado. O **phishing** e a **engenharia social** são as táticas de ataque mais comuns, onde um invasor se passa por uma entidade confiável (como seu banco ou uma rede social) para induzi-lo a digitar sua senha em um site falso. O melhor antídoto é a **vigilância**. **Sempre verifique o URL** na barra de endereços antes de digitar suas credenciais. Lembre-se: nenhum banco, serviço de e-mail ou empresa de renome jamais pedirá sua senha completa por e-mail, telefone ou SMS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3">
+                        <h3 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"
+                                id="btn-seguranca-6">
+                                <span class="me-3" aria-hidden="true">🔄</span> <span id="security6-title">Devo mudar minha senha regularmente?</span>
+                            </button>
+                        </h3>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                            data-bs-parent="#securityAccordion" role="tabpanel">
+                            <div class="accordion-body" id="security6-content">
+                                O consenso de segurança moderna, incluindo o NIST (Instituto Nacional de Padrões e Tecnologia dos EUA), afirma que a **expiração forçada de senhas** não é mais uma prática recomendada. A exigência de mudar a senha a cada 90 dias geralmente leva o usuário a escolher senhas mais fracas ou apenas modificar levemente a anterior (ex: Senha123 -> Senha124), diminuindo a segurança geral. A recomendação atual é:
+                                <ul>
+                                    <li>**Use uma senha forte e única (gerada por esta ferramenta).**</li>
+                                    <li>**Mude-a SOMENTE se houver uma violação de dados conhecida** no serviço ou se você suspeitar que ela foi comprometida.</li>
+                                    <li>**Ative o 2FA/MFA sempre.**</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven"
+                                id="btn-seguranca-7">
+                                <span class="me-3" aria-hidden="true">🚫</span> <span id="security7-title">Evite Padrões: A Falha da Previsibilidade</span>
+                            </button>
+                        </h3>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                            data-bs-parent="#securityAccordion" role="tabpanel">
+                            <div class="accordion-body" id="security7-content">
+                                Muitas pessoas tentam criar senhas "fortes" usando a combinação de palavras e números que lhes parecem aleatórias, mas que na verdade seguem um padrão previsível, como o nome do animal de estimação seguido do ano atual. Pior ainda são os padrões de teclado, como **qwerty123** ou sequências numéricas como **12345678**. Os programas de quebra de senha modernos são programados para tentar centenas de milhares desses padrões comuns logo no início do ataque. Uma senha verdadeiramente segura é aquela que não tem conexão lógica com o usuário e não segue nenhuma sequência ordenada, ou seja, uma senha gerada de forma completamente aleatória.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -467,8 +554,7 @@
 
     <footer class="text-center py-4" role="contentinfo">
         <div class="container">
-            <p class="mb-0" id="footer-text">&copy; 2025 Gerador de Senhas. Todos os direitos reservados. | [Política de
-                Privacidade] | [Termos de Uso]</p>
+            <p class="mb-0" id="footer-text">&copy; 2025 Gerador de Senhas. Todos os direitos reservados. | <a href="politica-privacidade.html">Política de Privacidade</a> | <a href="termos-de-uso.html">Termos de Uso</a></p>
         </div>
     </footer>
 
@@ -495,6 +581,15 @@
                 donationNote: "Todas as doações são processadas com segurança via PayPal.",
                 securityTitle: "🔒 A Importância de uma Senha Forte",
                 securityIntro: "Aprenda a se proteger em um mundo cada vez mais digital. O gerador de senhas é sua primeira linha de defesa.",
+                // NOVAS CHAVES DE CONTEÚDO PRINCIPAL
+                anatomiaTitle: "A Anatomia de uma Senha Perfeita",
+                anatomiaSubtitle: "Além do tamanho, o *mix* de caracteres é a chave para a máxima segurança. Entenda como cada categoria (maiúsculas, minúsculas, números e símbolos) contribui para o aumento da complexidade.",
+                keyspaceTitle: "O Impacto Exponencial do Conjunto de Caracteres",
+                keyspaceContent: "A força de uma senha é uma função direta do seu **tamanho (L)** e do **tamanho do alfabeto de caracteres (R)**. A fórmula para o número total de combinações (o *keyspace* ou espaço de busca) é $R^L$. Se um atacante souber que você usa apenas minúsculas (R=26), uma senha de 10 caracteres tem $26^{10}$ combinações possíveis. Ao adicionar maiúsculas, números e 32 símbolos (R $\approx$ 94), o número de combinações para os mesmos 10 caracteres salta para $94^{10}$, um aumento maciço na dificuldade de quebra. Para a aprovação em padrões de segurança, o uso de caracteres distintos deve ser aleatório e balanceado. É por isso que nosso gerador permite que você marque todas as opções, maximizando o $R$ (o conjunto de caracteres) e, consequentemente, a entropia.",
+                attackTitle: "Tipos de Ataques a Senhas",
+                attackContent: "Ataques de força bruta são os mais conhecidos, mas os cibercriminosos usam táticas mais refinadas. O **Ataque de Dicionário** tenta senhas baseadas em listas de palavras, nomes comuns e frases famosas. Já os **Rainbow Tables** (Tabelas Arco-Íris) são listas pré-calculadas de hashes de senhas comuns, permitindo que o invasor encontre a senha original a partir do hash roubado quase instantaneamente. O único antídoto contra estas técnicas é a criação de senhas que são **longas, aleatórias e não-dicionárias**.",
+
+                // CHAVES DE SEGURANÇA (EXISTENTES)
                 security1Title: "Senha forte vs. senha fraca",
                 security1Content: "A diferença crucial entre senhas fortes e fracas reside na sua **imprevisibilidade** e **comprimento**. Uma senha fraca, como \"senha123\" ou a data de seu aniversário, utiliza combinações óbvias que podem ser adivinhadas por bots em segundos, através de ataques de dicionário ou de força bruta simples. Uma **senha forte**, gerada de forma aleatória como as desta ferramenta, incorpora uma mistura complexa de letras maiúsculas e minúsculas, números e símbolos. Esta complexidade aumenta drasticamente a \"chave de busca\", tornando o esforço e o tempo necessários para decifrar a senha proibitivos até mesmo para os supercomputadores mais potentes. É por isso que você deve sempre priorizar o uso de um gerador para garantir que a aleatoriedade seja verdadeira.",
                 security2Title: "Por que usar senhas únicas para cada site?",
@@ -504,6 +599,17 @@
                 tip2: "Ative a Autenticação de Dois Fatores (2FA).",
                 tip3: "Desconfie de e-mails ou mensagens de phishing que pedem suas informações.",
                 tip4: "Mantenha software e sistemas operacionais atualizados.",
+                
+                // NOVAS CHAVES DE SEGURANÇA (ADICIONAIS)
+                security4Title: "Como os sites armazenam (e protegem) sua senha?",
+                security4Content: "Quando você cria uma conta em um site, sua senha **não é armazenada em texto puro**. Em vez disso, o site armazena um **hash** da sua senha. Um hash é o resultado de uma função criptográfica unidirecional (como **SHA-256** ou **Bcrypt**) que transforma a sua senha em uma cadeia de caracteres de tamanho fixo. O processo de *hashing* é irreversível. Se uma base de dados for roubada, os invasores só terão acesso aos hashes, não às senhas originais. Senhas fortes e longas, como as geradas por esta ferramenta, dificultam a vida do atacante, pois tornam a busca pelo texto original (*reverse engineering* ou *rainbow tables*) extremamente lenta e ineficaz.",
+                security5Title: "O Risco de Phishing e Engenharia Social",
+                security5Content: "Mesmo a senha mais forte é inútil se for entregue de bom grado. O **phishing** e a **engenharia social** são as táticas de ataque mais comuns, onde um invasor se passa por uma entidade confiável (como seu banco ou uma rede social) para induzi-lo a digitar sua senha em um site falso. O melhor antídoto é a **vigilância**. **Sempre verifique o URL** na barra de endereços antes de digitar suas credenciais. Lembre-se: nenhum banco, serviço de e-mail ou empresa de renome jamais pedirá sua senha completa por e-mail, telefone ou SMS.",
+                security6Title: "Devo mudar minha senha regularmente?",
+                security6Content: "O consenso de segurança moderna, incluindo o NIST (Instituto Nacional de Padrões e Tecnologia dos EUA), afirma que a **expiração forçada de senhas** não é mais uma prática recomendada. A exigência de mudar a senha a cada 90 dias geralmente leva o usuário a escolher senhas mais fracas ou apenas modificar levemente a anterior (ex: Senha123 -> Senha124), diminuindo a segurança geral. A recomendação atual é:<ul><li>**Use uma senha forte e única (gerada por esta ferramenta).**</li><li>**Mude-a SOMENTE se houver uma violação de dados conhecida** no serviço ou se você suspeitar que ela foi comprometida.</li><li>**Ative o 2FA/MFA sempre.**</li></ul>",
+                security7Title: "Evite Padrões: A Falha da Previsibilidade",
+                security7Content: "Muitas pessoas tentam criar senhas \"fortes\" usando a combinação de palavras e números que lhes parecem aleatórias, mas que na verdade seguem um padrão previsível, como o nome do animal de estimação seguido do ano atual. Pior ainda são os padrões de teclado, como **qwerty123** ou sequências numéricas como **12345678**. Os programas de quebra de senha modernos são programados para tentar centenas de milhares desses padrões comuns logo no início do ataque. Uma senha verdadeiramente segura é aquela que não tem conexão lógica com o usuário e não segue nenhuma sequência ordenada, ou seja, uma senha gerada de forma completamente aleatória.",
+                
                 footerText: "© 2025 Gerador de Senhas. Todos os direitos reservados. | [Política de Privacidade] | [Termos de Uso]"
             },
             en: {
@@ -527,6 +633,16 @@
                 donationNote: "All donations are securely processed via PayPal.",
                 securityTitle: "🔒 The Importance of a Strong Password",
                 securityIntro: "Learn to protect yourself in an increasingly digital world. The password generator is your first line of defense.",
+                
+                // NOVAS CHAVES DE CONTEÚDO PRINCIPAL
+                anatomiaTitle: "The Anatomy of a Perfect Password",
+                anatomiaSubtitle: "Beyond length, the *mix* of characters is the key to maximum security. Understand how each category (uppercase, lowercase, numbers, and symbols) contributes to increased complexity.",
+                keyspaceTitle: "The Exponential Impact of the Character Set",
+                keyspaceContent: "The strength of a password is a direct function of its **length (L)** and the **size of the character alphabet (R)**. The formula for the total number of combinations (the *keyspace* or search space) is $R^L$. If an attacker knows you only use lowercase letters (R=26), a 10-character password has $26^{10}$ possible combinations. By adding uppercase, numbers, and 32 symbols (R $\approx$ 94), the number of combinations for the same 10 characters jumps to $94^{10}$, a massive increase in breaking difficulty. For security standards compliance, the use of distinct characters must be random and balanced. That is why our generator allows you to check all options, maximizing $R$ (the character set) and, consequently, entropy.",
+                attackTitle: "Types of Password Attacks",
+                attackContent: "Brute force attacks are the best known, but cybercriminals use more refined tactics. **Dictionary Attacks** try passwords based on lists of common words, names, and famous phrases. **Rainbow Tables** are pre-calculated lists of hashes of common passwords, allowing the attacker to find the original password from the stolen hash almost instantly. The only antidote against these techniques is creating passwords that are **long, random, and non-dictionary**.",
+
+                // CHAVES DE SEGURANÇA (EXISTENTES)
                 security1Title: "Strong vs. Weak Password",
                 security1Content: "The crucial difference between strong and weak passwords lies in their **unpredictability** and **length**. A weak password, like \"password123\" or your birthday, uses obvious combinations that can be guessed by bots in seconds, through dictionary or simple brute force attacks. A **strong password**, randomly generated like those from this tool, incorporates a complex mix of uppercase and lowercase letters, numbers, and symbols. This complexity dramatically increases the \"search key,\" making the effort and time required to decrypt the password prohibitive even for the most powerful supercomputers. This is why you should always prioritize using a generator to ensure true randomness.",
                 security2Title: "Why use unique passwords for each site?",
@@ -536,6 +652,17 @@
                 tip2: "Enable Two-Factor Authentication (2FA).",
                 tip3: "Be cautious of phishing emails or messages asking for your information.",
                 tip4: "Keep software and operating systems up to date.",
+
+                // NOVAS CHAVES DE SEGURANÇA (ADICIONAIS)
+                security4Title: "How do websites store (and protect) your password?",
+                security4Content: "When you create an account on a website, your password **is not stored in plain text**. Instead, the site stores a **hash** of your password. A hash is the result of a one-way cryptographic function (like **SHA-256** or **Bcrypt**) that transforms your password into a fixed-size character string. The *hashing* process is irreversible. If a database is stolen, attackers will only have access to the hashes, not the original passwords. Strong, long passwords, like those generated by this tool, make the attacker's job difficult, as they make searching for the original text (*reverse engineering* or *rainbow tables*) extremely slow and ineffective.",
+                security5Title: "The Risk of Phishing and Social Engineering",
+                security5Content: "Even the strongest password is useless if willingly given away. **Phishing** and **social engineering** are the most common attack tactics, where an attacker impersonates a trusted entity (like your bank or a social network) to trick you into entering your password on a fake website. The best antidote is **vigilance**. **Always check the URL** in the address bar before entering your credentials. Remember: no bank, email service, or reputable company will ever ask for your full password via email, phone, or SMS.",
+                security6Title: "Should I change my password regularly?",
+                security6Content: "The modern security consensus, including the NIST (National Institute of Standards and Technology), states that **forced password expiration** is no longer a recommended practice. Requiring a password change every 90 days often leads the user to choose weaker passwords or only slightly modify the previous one (e.g., Password123 -> Password124), decreasing overall security. The current recommendation is:<ul><li>**Use a strong and unique password (generated by this tool).**</li><li>**Change it ONLY if there is a known data breach** in the service or if you suspect it has been compromised.</li><li>**Enable 2FA/MFA always.**</li></ul>",
+                security7Title: "Avoid Patterns: The Failure of Predictability",
+                security7Content: "Many people try to create 'strong' passwords using a combination of words and numbers that seem random but actually follow a predictable pattern, such as a pet's name followed by the current year. Even worse are keyboard patterns, like **qwerty123** or numerical sequences like **12345678**. Modern password-cracking programs are programmed to try hundreds of thousands of these common patterns early in the attack. A truly secure password is one that has no logical connection to the user and follows no ordered sequence, meaning a password generated completely randomly.",
+                
                 footerText: "© 2025 Password Generator. All rights reserved. | [Privacy Policy] | [Terms of Use]"
             },
             es: {
@@ -559,6 +686,16 @@
                 donationNote: "Todas las donaciones se procesan de manera segura a través de PayPal.",
                 securityTitle: "🔒 La Importancia de una Contraseña Fuerte",
                 securityIntro: "Aprende a protegerte en un mundo cada vez más digital. El generador de contraseñas es tu primera línea de defensa.",
+
+                // NOVAS CHAVES DE CONTEÚDO PRINCIPAL
+                anatomiaTitle: "La Anatomía de una Contraseña Perfecta",
+                anatomiaSubtitle: "Más allá de la longitud, la *mezcla* de caracteres es la clave para la máxima seguridad. Comprende cómo cada categoría (mayúsculas, minúsculas, números y símbolos) contribuye al aumento de la complejidad.",
+                keyspaceTitle: "El Impacto Exponencial del Conjunto de Caracteres",
+                keyspaceContent: "La fuerza de una contraseña es una función directa de su **longitud (L)** y del **tamaño del alfabeto de caracteres (R)**. La fórmula para el número total de combinações (el *keyspace* o espacio de búsqueda) es $R^L$. Si un atacante sabe que solo usas minúsculas (R=26), una contraseña de 10 caracteres tiene $26^{10}$ combinaciones posibles. Al agregar mayúsculas, números y 32 símbolos (R $\approx$ 94), el número de combinaciones para los mismos 10 caracteres salta a $94^{10}$, un aumento masivo en la dificultad de quiebre. Para la aprobación en estándares de seguridad, el uso de caracteres distintos debe ser aleatorio y balanceado. Es por eso que nuestro generador te permite marcar todas las opciones, maximizando el $R$ (el conjunto de caracteres) y, en consecuencia, la entropía.",
+                attackTitle: "Tipos de Ataques a Contraseñas",
+                attackContent: "Los ataques de fuerza bruta son los más conocidos, pero los ciberdelincuentes utilizan tácticas más refinadas. El **Ataque de Diccionario** intenta contraseñas basadas en listas de palabras, nombres comunes y frases famosas. Las **Rainbow Tables** (Tablas Arcoíris) son listas precalculadas de hashes de contraseñas comunes, permitiendo que el atacante encuentre la contraseña original a partir del hash robado casi instantáneamente. El único antídoto contra estas técnicas es la creación de contraseñas que son **largas, aleatorias y no-diccionario**.",
+
+                // CHAVES DE SEGURANÇA (EXISTENTES)
                 security1Title: "Contraseña Fuerte vs. Débil",
                 security1Content: "La diferencia crucial entre contraseñas fuertes y débiles reside en su **imprevisibilidad** y **longitud**. Una contraseña débil, como \"contraseña123\" o tu fecha de cumpleaños, utiliza combinaciones obvias que pueden ser adivinadas por bots en segundos, a través de ataques de diccionario o de fuerza bruta simple. Una **contraseña fuerte**, generada de forma aleatoria como las de esta herramienta, incorpora una mezcla compleja de letras mayúsculas y minúsculas, números y símbolos. Esta complejidad aumenta drásticamente la \"clave de búsqueda\", haciendo que el esfuerzo y el tiempo necesarios para descifrar la contraseña sean prohibitivos incluso para las supercomputadoras más potentes. Por eso, siempre debes priorizar el uso de un generador para garantizar una verdadera aleatoriedad.",
                 security2Title: "¿Por qué usar contraseñas únicas para cada sitio?",
@@ -568,11 +705,20 @@
                 tip2: "Activa la Autenticación de Dos Factores (2FA).",
                 tip3: "Desconfía de correos electrónicos o mensajes de phishing que soliciten tu información.",
                 tip4: "Mantén el software y los sistemas operativos actualizados.",
-                footerText: "© 2025 Generador de Contraseñas. Todos los derechos reservados. | [Política de Privacidad] | [Términos de Uso]"
+
+                // NOVAS CHAVES DE SEGURANÇA (ADICIONAIS)
+                security4Title: "¿Cómo almacenan (y protegen) tu contraseña los sitios web?",
+                security4Content: "Cuando creas una cuenta en un sitio web, tu contraseña **no se almacena en texto plano**. En su lugar, el sitio almacena un **hash** de tu contraseña. Un hash es el resultado de una función criptográfica unidireccional (como **SHA-256** o **Bcrypt**) que transforma tu contraseña en una cadena de caracteres de tamaño fijo. El proceso de *hashing* es irreversible. Si se roba una base de datos, los atacantes solo tendrán acceso a los hashes, no a las contraseñas originales. Las contraseñas fuertes y largas, como las generadas por esta herramienta, dificultan el trabajo del atacante, ya que hacen que la búsqueda del texto original (*ingeniería inversa* o *tablas arcoíris*) sea extremadamente lenta e ineficaz.",
+                security5Title: "El Riesgo de Phishing e Ingeniería Social",
+                security5Content: "Incluso la contraseña más fuerte es inútil si se entrega voluntariamente. El **phishing** y la **ingeniería social** son las tácticas de ataque más comunes, donde un atacante se hace pasar por una entidad de confianza (como tu banco ou uma rede social) para engañarte y hacer que ingreses tu contraseña en un sitio web falso. El mejor antídoto es la **vigilancia**. **Siempre verifica la URL** en la barra de direcciones antes de ingresar tus credenciales. Recuerda: ningún banco, servicio de correo electrónico o empresa de renombre te pedirá jamás tu contraseña completa por correo electrónico, teléfono o SMS.",
+                security6Title: "¿Debo cambiar mi contraseña regularmente?",
+                security6Content: "El consenso de seguridad moderna, incluyendo el NIST (Instituto Nacional de Estándares y Tecnología de EE. UU.), afirma que la **expiração forzada de contraseñas** ya no es una práctica recomendada. La exigencia de mudar a senha a cada 90 dias geralmente leva o usuário a escolher senhas mais fracas ou apenas modificar levemente a anterior (ex: Contraseña123 -> Contraseña124), diminuindo a segurança geral. A recomendação atual é:<ul><li>**Usa una contraseña fuerte y única (generada por esta herramienta).**</li><li>**Cámbiala SOLO si hay una violación de datos conocida** en el servicio o si sospechas que ha sido comprometida.</li><li>**Activa 2FA/MFA siempre.**</li></ul>",
+                security7Title: "Evita Patrones: El Fallo de la Previsibilidad",
+                security7Content: "Muitas pessoas tentam criar senhas \"fortes\" usando a combinação de palavras e números que lhes parecem aleatórias, mas que na verdade seguem um padrão previsível, como o nome do animal de estimação seguido do ano atual. Pior ainda são os padrões de teclado, como **qwerty123** ou sequências numéricas como **12345678**. Os programas de quebra de senha modernos são programados para tentar centenas de milhares desses padrões comuns logo no início do ataque. Uma senha verdadeiramente segura é aquela que não tem conexão lógica com o usuário e não segue nenhuma sequência ordenada, ou seja, uma senha gerada de forma completamente aleatória.",
+
+                footerText: "© 2025 Generador de Contraseñas. Todos los derechos reservados. | [Política de Privacidade] | [Termos de Uso]"
             }
         };
-
-        // ... O restante do seu script JavaScript (para gerar e traduzir)
 
         function changeLanguage(lang) {
             const t = translations[lang];
@@ -599,19 +745,34 @@
             document.getElementById('donateOther').textContent = t.donateOther;
             document.getElementById('donation-note').textContent = t.donationNote;
 
-            document.getElementById('securityTitle').textContent = t.securityTitle;
-            document.getElementById('securityIntro').textContent = t.securityIntro;
-
-            // Atualiza os títulos dos Accordions
+            document.getElementById('security-title').textContent = t.securityTitle;
+            document.getElementById('security-intro').textContent = t.securityIntro;
+            
+            // NOVAS SEÇÕES DE CONTEÚDO PRINCIPAL
+            document.getElementById('anatomia-title').textContent = t.anatomiaTitle;
+            document.getElementById('anatomia-subtitle').textContent = t.anatomiaSubtitle;
+            document.getElementById('keyspace-title').textContent = t.keyspaceTitle;
+            document.getElementById('keyspace-content').innerHTML = t.keyspaceContent;
+            document.getElementById('attack-title').textContent = t.attackTitle;
+            document.getElementById('attack-content').innerHTML = t.attackContent;
+            
+            // Atualiza os títulos dos Accordions (EXISTENTES E NOVOS)
             document.getElementById('security1-title').textContent = t.security1Title;
             document.getElementById('security2-title').textContent = t.security2Title;
             document.getElementById('security3-title').textContent = t.security3Title;
+            document.getElementById('security4-title').textContent = t.security4Title;
+            document.getElementById('security5-title').textContent = t.security5Title;
+            document.getElementById('security6-title').textContent = t.security6Title;
+            document.getElementById('security7-title').textContent = t.security7Title;
 
             // Atualiza o conteúdo expandido dos Accordions (o texto maior)
             document.getElementById('security1-content').innerHTML = t.security1Content;
             document.getElementById('security2-content').innerHTML = t.security2Content;
             document.getElementById('security3-content').innerHTML = `<ul><li id="tip1">${t.tip1}</li><li id="tip2">${t.tip2}</li><li id="tip3">${t.tip3}</li><li id="tip4">${t.tip4}</li></ul>`;
-
+            document.getElementById('security4-content').innerHTML = t.security4Content;
+            document.getElementById('security5-content').innerHTML = t.security5Content;
+            document.getElementById('security6-content').innerHTML = t.security6Content;
+            document.getElementById('security7-content').innerHTML = t.security7Content;
 
             document.getElementById('footer-text').innerHTML = t.footerText;
         }
